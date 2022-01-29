@@ -7,20 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB97306826202A4D0D2DE37 /* Pods_HMApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298C84C410D38364B96DC61D /* Pods_HMApp.framework */; };
 		C272AC432791F6F100C9041F /* HMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC422791F6F100C9041F /* HMAppApp.swift */; };
 		C272AC452791F6F100C9041F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC442791F6F100C9041F /* ContentView.swift */; };
 		C272AC472791F6F300C9041F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272AC462791F6F300C9041F /* Assets.xcassets */; };
 		C272AC4A2791F6F300C9041F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272AC492791F6F300C9041F /* Preview Assets.xcassets */; };
-		C272AC512791F9D500C9041F /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC502791F9D500C9041F /* UIColor+Ext.swift */; };
+		C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC502791F9D500C9041F /* Color+Ext.swift */; };
+		C282BD17279F127500482118 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282BD16279F127400482118 /* WelcomeView.swift */; };
+		C282BD1A279F1B5D00482118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C282BD19279F1B5D00482118 /* GoogleService-Info.plist */; };
+		C2BFA488279F39B50039A610 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C2BFA487279F39B50039A610 /* GoogleSignIn */; };
+		C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48B27A0443E0039A610 /* CustomShapes.swift */; };
+		C2BFA48E27A0448E0039A610 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48D27A0448E0039A610 /* Login.swift */; };
+		C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48F27A044DA0039A610 /* SignUp.swift */; };
+		C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */; };
+		C2BFA49427A321C80039A610 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49327A321C80039A610 /* HomeView.swift */; };
+		C2BFA49627A3274A0039A610 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49527A3274A0039A610 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B60E7FDBAD53DFF35A91B36 /* Pods-HMApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMApp.debug.xcconfig"; path = "Target Support Files/Pods-HMApp/Pods-HMApp.debug.xcconfig"; sourceTree = "<group>"; };
+		298C84C410D38364B96DC61D /* Pods_HMApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HMApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C272AC3F2791F6F100C9041F /* HMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C272AC422791F6F100C9041F /* HMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAppApp.swift; sourceTree = "<group>"; };
 		C272AC442791F6F100C9041F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C272AC462791F6F300C9041F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C272AC492791F6F300C9041F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C272AC502791F9D500C9041F /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		C272AC502791F9D500C9041F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		C282BD16279F127400482118 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		C282BD19279F1B5D00482118 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2BFA489279F3B6D0039A610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "HMApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		C2BFA48B27A0443E0039A610 /* CustomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapes.swift; sourceTree = "<group>"; };
+		C2BFA48D27A0448E0039A610 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		C2BFA48F27A044DA0039A610 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRepresentable+Ext.swift"; sourceTree = "<group>"; };
+		C2BFA49327A321C80039A610 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C2BFA49527A3274A0039A610 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E939D5103670EAFC1A77877C /* Pods-HMApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMApp.release.xcconfig"; path = "Target Support Files/Pods-HMApp/Pods-HMApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +50,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB97306826202A4D0D2DE37 /* Pods_HMApp.framework in Frameworks */,
+				C2BFA488279F39B50039A610 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A55B172320DF7CF974A6B841 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B60E7FDBAD53DFF35A91B36 /* Pods-HMApp.debug.xcconfig */,
+				E939D5103670EAFC1A77877C /* Pods-HMApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA31EDD60C0205CFF5C3F7BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				298C84C410D38364B96DC61D /* Pods_HMApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C272AC362791F6F100C9041F = {
 			isa = PBXGroup;
 			children = (
 				C272AC412791F6F100C9041F /* HMApp */,
 				C272AC402791F6F100C9041F /* Products */,
+				A55B172320DF7CF974A6B841 /* Pods */,
+				AA31EDD60C0205CFF5C3F7BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,11 +96,13 @@
 		C272AC412791F6F100C9041F /* HMApp */ = {
 			isa = PBXGroup;
 			children = (
+				C282BD18279F133800482118 /* Color+Ext */,
+				C282BD15279EDE4800482118 /* HomeScreen */,
+				C282BD14279EDE3000482118 /* AuthentificationScreen */,
 				C272AC422791F6F100C9041F /* HMAppApp.swift */,
 				C272AC442791F6F100C9041F /* ContentView.swift */,
-				C272AC462791F6F300C9041F /* Assets.xcassets */,
+				C2BFA48A27A000460039A610 /* Supporting Files */,
 				C272AC482791F6F300C9041F /* Preview Content */,
-				C272AC502791F9D500C9041F /* UIColor+Ext.swift */,
 			);
 			path = HMApp;
 			sourceTree = "<group>";
@@ -70,6 +115,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C282BD14279EDE3000482118 /* AuthentificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C282BD16279F127400482118 /* WelcomeView.swift */,
+				C2BFA48B27A0443E0039A610 /* CustomShapes.swift */,
+				C2BFA48D27A0448E0039A610 /* Login.swift */,
+				C2BFA48F27A044DA0039A610 /* SignUp.swift */,
+				C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */,
+			);
+			path = AuthentificationScreen;
+			sourceTree = "<group>";
+		};
+		C282BD15279EDE4800482118 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C2BFA49327A321C80039A610 /* HomeView.swift */,
+				C2BFA49527A3274A0039A610 /* HomeViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		C282BD18279F133800482118 /* Color+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				C272AC502791F9D500C9041F /* Color+Ext.swift */,
+			);
+			path = "Color+Ext";
+			sourceTree = "<group>";
+		};
+		C2BFA48A27A000460039A610 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BFA489279F3B6D0039A610 /* Info.plist */,
+				C282BD19279F1B5D00482118 /* GoogleService-Info.plist */,
+				C272AC462791F6F300C9041F /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +161,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C272AC4D2791F6F300C9041F /* Build configuration list for PBXNativeTarget "HMApp" */;
 			buildPhases = (
+				0F8F3A6D8627C5DF7D05CD3F /* [CP] Check Pods Manifest.lock */,
 				C272AC3B2791F6F100C9041F /* Sources */,
 				C272AC3C2791F6F100C9041F /* Frameworks */,
 				C272AC3D2791F6F100C9041F /* Resources */,
+				8C6C4415326E521E628A5229 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HMApp;
+			packageProductDependencies = (
+				C2BFA487279F39B50039A610 /* GoogleSignIn */,
+			);
 			productName = HMApp;
 			productReference = C272AC3F2791F6F100C9041F /* HMApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +203,9 @@
 				Base,
 			);
 			mainGroup = C272AC362791F6F100C9041F;
+			packageReferences = (
+				C2BFA486279F39B40039A610 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = C272AC402791F6F100C9041F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,19 +222,69 @@
 			files = (
 				C272AC4A2791F6F300C9041F /* Preview Assets.xcassets in Resources */,
 				C272AC472791F6F300C9041F /* Assets.xcassets in Resources */,
+				C282BD1A279F1B5D00482118 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F8F3A6D8627C5DF7D05CD3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HMApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6C4415326E521E628A5229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HMApp/Pods-HMApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HMApp/Pods-HMApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HMApp/Pods-HMApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C272AC3B2791F6F100C9041F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C272AC512791F9D500C9041F /* UIColor+Ext.swift in Sources */,
+				C2BFA49427A321C80039A610 /* HomeView.swift in Sources */,
+				C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */,
+				C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */,
+				C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */,
 				C272AC452791F6F100C9041F /* ContentView.swift in Sources */,
+				C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */,
+				C2BFA48E27A0448E0039A610 /* Login.swift in Sources */,
 				C272AC432791F6F100C9041F /* HMAppApp.swift in Sources */,
+				C2BFA49627A3274A0039A610 /* HomeViewModel.swift in Sources */,
+				C282BD17279F127500482118 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +409,7 @@
 		};
 		C272AC4E2791F6F300C9041F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B60E7FDBAD53DFF35A91B36 /* Pods-HMApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -276,6 +419,7 @@
 				DEVELOPMENT_TEAM = T68A89LKNX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HMApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +440,7 @@
 		};
 		C272AC4F2791F6F300C9041F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E939D5103670EAFC1A77877C /* Pods-HMApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +450,7 @@
 				DEVELOPMENT_TEAM = T68A89LKNX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HMApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2BFA486279F39B40039A610 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2BFA487279F39B50039A610 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2BFA486279F39B40039A610 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C272AC372791F6F100C9041F /* Project object */;
 }
