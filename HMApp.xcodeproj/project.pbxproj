@@ -22,6 +22,7 @@
 		C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */; };
 		C2BFA49427A321C80039A610 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49327A321C80039A610 /* HomeView.swift */; };
 		C2BFA49627A3274A0039A610 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49527A3274A0039A610 /* HomeViewModel.swift */; };
+		C2BFA49827A6840F0039A610 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49727A6840F0039A610 /* LoadingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRepresentable+Ext.swift"; sourceTree = "<group>"; };
 		C2BFA49327A321C80039A610 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C2BFA49527A3274A0039A610 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C2BFA49727A6840F0039A610 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		E939D5103670EAFC1A77877C /* Pods-HMApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMApp.release.xcconfig"; path = "Target Support Files/Pods-HMApp/Pods-HMApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				C272AC442791F6F100C9041F /* ContentView.swift */,
 				C2BFA48A27A000460039A610 /* Supporting Files */,
 				C272AC482791F6F300C9041F /* Preview Content */,
+				C2BFA49727A6840F0039A610 /* LoadingScreen.swift */,
 			);
 			path = HMApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2BFA49427A321C80039A610 /* HomeView.swift in Sources */,
+				C2BFA49827A6840F0039A610 /* LoadingScreen.swift in Sources */,
 				C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */,
 				C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */,
 				C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */,

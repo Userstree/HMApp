@@ -12,7 +12,7 @@ struct SignUp: View {
     @State var password: String = ""
     @State var username: String = ""
     @Binding var index: Int
-    @EnvironmentObject var homeViewModel: HomeViewModel
+    @StateObject var accountCreation: HomeViewModel
     
     var body: some View {
         
@@ -85,7 +85,7 @@ struct SignUp: View {
             
             Button(action: {
                 
-                homeViewModel.register(username, email, password)
+                accountCreation.registerUser(username, email, password)
                 
             }) {
                 

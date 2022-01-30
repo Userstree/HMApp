@@ -7,18 +7,28 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
+import Firebase
 
 class HomeViewModel: ObservableObject {
     // User details
     @Published var name = ""
     @Published var email = ""
-    @Published var password = ""
+    @Published var age = ""
+    @Published var imageUrl = ""
     
     // User Image
     @Published var userImage = ""
     
     //Images
     @Published var images = Array(repeating: Data(count: 0), count: 4)
+    
+    //Loading Screen
+    @Published var isLoading = false
+    
+    // Alert Details
+    @Published var alert = false
+    @Published var alertmsg = ""
     
     func login(_ email: String, _ password: String) {
         
@@ -36,15 +46,58 @@ class HomeViewModel: ObservableObject {
         
     }
     
-    func register(_ username: String,_ email: String,_ password: String) {
+    func registerUser(_ username: String,_ email: String,_ password: String) {
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
             if let error = error {
                 print("Failed to register user due to ", error.localizedDescription)
             }
-        
+            
+            guard let uid = result?.user.uid else {
+                return
+            }
+            
+            let db = Firestore.firestore()
+            
+            db.collection("Users").document(uid).setData([
+                "Username" : self.name,
+                "Email" : self.email
+//                "Image" : self.imageUrl
+//                "Age" : self.age
+            ]) { (error) in
+                
+                if error != nil {
+                    self.alertmsg = error!.localizedDescription
+                    self.alert.toggle()
+                    return
+                }
+                
+            }
+            print("User successfully created")
         }
+    }
+    
+    func alertController(title: String) {
+        
+        let alertView = UIAlertController(title: title, message: alertmsg, preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        
+        let ok = UIAlertAction(title: "OK", style: .default) { (_) in
+            
+        }
+        
+        alertView.addTextField { (textfield) in
+            textfield.text = "123"
+        }
+        
+        alertView.addAction(ok)
+        
+        alertView.addAction(cancel)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(alertView, animated: true, completion: nil)
+         
     }
     
 }
