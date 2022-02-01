@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SignUp: View {
+    
     @State var email: String = ""
     @State var password: String = ""
     @State var username: String = ""
     @Binding var index: Int
-    @StateObject var accountCreation: HomeViewModel
+    @EnvironmentObject var accountCreation: HomeViewModel
     
     var body: some View {
         
@@ -40,7 +41,7 @@ struct SignUp: View {
                         Image(systemName: "person.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
                         
-                        TextArea(placeholder: "Username", text: self.$username, isSecureEntry: false)
+                        TextArea(placeholder: "Username", text: $username, isSecureEntry: false)
                             .frame(height: 20)
                         
                     }
@@ -54,7 +55,7 @@ struct SignUp: View {
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
     
-                        TextArea(placeholder: "Email", text: self.$email, isSecureEntry: false)
+                        TextArea(placeholder: "Email", text: $email, isSecureEntry: false)
                             .frame(height: 20)
                         
                     }
@@ -85,7 +86,7 @@ struct SignUp: View {
             
             Button(action: {
                 
-                accountCreation.registerUser(username, email, password)
+                accountCreation.registerUser(username: username, email: email, password: password)
                 
             }) {
                 

@@ -82,7 +82,7 @@ struct Login: View {
             
                 Button(action: {
 //                    handleLogin()
-                    homeViewModel.login(email, password)
+                    homeViewModel.login(email: email, password: password)
                     ContentView().log_Status = true
                 }) {
                     Text("Login")

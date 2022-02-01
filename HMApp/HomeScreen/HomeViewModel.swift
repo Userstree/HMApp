@@ -12,8 +12,9 @@ import Firebase
 
 class HomeViewModel: ObservableObject {
     // User details
-    @Published var name = ""
-    @Published var email = ""
+//    @Published var username = ""
+//    @Published var email = ""
+//    @Published var password = ""
     @Published var age = ""
     @Published var imageUrl = ""
     
@@ -30,7 +31,7 @@ class HomeViewModel: ObservableObject {
     @Published var alert = false
     @Published var alertmsg = ""
     
-    func login(_ email: String, _ password: String) {
+    func login(email: String, password: String) {
         
         Auth.auth().signIn(withEmail: email, password: password) { res, error in
             
@@ -46,7 +47,7 @@ class HomeViewModel: ObservableObject {
         
     }
     
-    func registerUser(_ username: String,_ email: String,_ password: String) {
+    func registerUser(username: String, email: String, password: String) {
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
@@ -61,8 +62,8 @@ class HomeViewModel: ObservableObject {
             let db = Firestore.firestore()
             
             db.collection("Users").document(uid).setData([
-                "Username" : self.name,
-                "Email" : self.email
+                "Username" : username,
+                "Email" : email
 //                "Image" : self.imageUrl
 //                "Age" : self.age
             ]) { (error) in
