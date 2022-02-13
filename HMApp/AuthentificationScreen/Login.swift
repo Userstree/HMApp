@@ -10,10 +10,11 @@ import Firebase
 import GoogleSignIn
 
 struct Login: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
     @Binding var index: Int
-    @EnvironmentObject var homeViewModel: HomeViewModel
+    
+    @EnvironmentObject var homeViewModel: ManageAccount
     
     var body: some View {
         
@@ -80,39 +81,31 @@ struct Login: View {
             .cornerRadius(35)
             .padding(.horizontal, 20)
             
-                Button(action: {
-//                    handleLogin()
-                    homeViewModel.login(email: email, password: password)
-                    ContentView().log_Status = true
-                }) {
-                    Text("Login")
-                        .foregroundColor(Color.black)
-                        .fontWeight(.bold)
-                        .padding(.vertical)
-                        .clipShape(Capsule())
-                        .padding(.horizontal, 50)
-                        .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
-                }
-                .background(Color.fieldsMainGreenColor)
-                .cornerRadius(30)
-                .offset(y: 25)
-                .opacity(self.index == 0 ? 1 : 0)
+            Button(action: {
+                homeViewModel.login(email: email, password: password)
+                
+                ContentView().log_Status = true
+            }) {
+                Text("Login")
+                    .foregroundColor(Color.black)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .clipShape(Capsule())
+                    .padding(.horizontal, 50)
+                    .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
+            }
+            .background(Color.fieldsMainGreenColor)
+            .cornerRadius(30)
+            .offset(y: 25)
+            .opacity(self.index == 0 ? 1 : 0)
         }
     }
 }
 
-//extension Login {
-//
-//    func handleLogin() {
-//        Auth.auth().signIn(withEmail: email, password: password) { res, err in
-//            if let error = err {
-//                print("Cannot login", error.localizedDescription)
-//                return
-//            }
-//            print("Successfully logged in")
-//        }
-//    }
-//
-//}
-
-
+#if DEBUG
+struct Welcome_Preview: PreviewProvider {
+    static var previews: some View {
+        Welcome()
+    }
+}
+#endif

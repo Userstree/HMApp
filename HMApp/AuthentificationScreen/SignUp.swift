@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SignUp: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var username: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var username: String = ""
     @Binding var index: Int
-    @EnvironmentObject var accountCreation: HomeViewModel
+    @EnvironmentObject var accountCreation: ManageAccount
     
     var body: some View {
         

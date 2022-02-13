@@ -11,13 +11,13 @@ struct LoadingScreen: View {
     var body: some View {
         
         ZStack {
-            Color.black.opacity(0.2).ignoresSafeArea(.all, edges: .all)
+            Color(.systemBackground).ignoresSafeArea().opacity(0.5)
             
             ProgressView()
-                .padding(20)
-                .background(Color.white)
-                .cornerRadius(10)
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                .scaleEffect(3)
         }
+        
     }
 }
 
