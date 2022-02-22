@@ -11,45 +11,94 @@ import FirebaseFirestore
 import FirebaseStorage
 
 struct UserCredentials: Identifiable, Codable{
-    var id = UUID().uuidString
-    var username: String
-    var email: String
-    var userImage: String
+    let id = UUID().uuidString
+    let username, email, imageUrl: String
+//    let image: Image
     
     enum CodingKeys: String, CodingKey {
-        case username, email, userImage
+        case username, email, imageUrl
     }
+    
+    init(username: String, email: String, imageUrl: String) {
+        self.username = username
+        self.email = email
+        self.imageUrl = imageUrl
+    }
+    
+//    init() {
+//        let storage = Storage.storage().reference(forURL: userImageUrl)
+//
+//        storage.getData(maxSize: 1 * 1024 * 1024) { data, error in
+//            if let error = error {
+//                print("Error downloading an image ", error.localizedDescription)
+//            } else {
+//                print("Image has been loaded successfully")
+//                self.image = Image(uiImage: UIImage(data: data!)!)
+//            }
+//        }
+//    }
+    
+    func getImage() -> Image? {
+        var image: Image?
+        guard let currentUser = Auth.auth().currentUser?.uid else {
+            print("Current user Value is empty")
+            return nil
+        }
+        
+        Firestore.firestore().collection("Users").document(currentUser).addSnapshotListener { snapshot, error in
+            guard let document = snapshot else {
+                print("Error fetching the document")
+                return
+            }
+            do {
+                let data = try document.data(as: UserCredentials.self)
+                guard let url = data?.imageUrl else {
+                    print("could not convert to url")
+                    return
+                }
+                print("url: ", url)
+                
+                Storage.storage().reference(forURL: url).getData(maxSize: 1024 * 1024) { data, error in
+                    if let error = error {
+                        print("Error downloading an image ", error.localizedDescription)
+                    } else {
+                        print("Image has been loaded successfully")
+                        image = Image(uiImage: UIImage(data: data!)!)
+                    }
+                }
+                
+            } catch {
+                fatalError("Document data is empty")
+            }
+        }
+        return image
+    }
+    
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        
+//        username = try values.decode(String.self, forKey: .username)
+//        email = try values.decode(String.self, forKey: .email)
+//        imageUrl = try values.decode(String.self, forKey: .imageUrl)
+//    }
+//    
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//        
+//        try container.encode(email, forKey: .email)
+//        try container.encode(username, forKey: .username)
+//        try container.encode(imageUrl, forKey: .imageUrl)
+//    }
 }
 
 class ManageAccount: ObservableObject {
     @Published var userInfo: UserCredentials?
-    @Published var userImg: UIImage? = nil
     @Published var isLoaded = false
     @Published var errorMsg = ""
 }
 
 extension ManageAccount {
     
-    func getUserImage(url: String) {
-        let storage = Storage.storage()
-        guard let url = userInfo?.userImage else {
-            return
-        }
-        let storageRef = storage.reference(forURL: url)
-        var image = UIImage()
-        
-        storageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                print("Error downloading an image ", error.localizedDescription)
-            } else {
-                print("Image has been loaded successfully")
-                image = UIImage(data: data!)!
-            }
-        }
-        
-        self.userImg = image
-        self.isLoaded = true
-    }
     
     func fetchUserData() async {
         do {

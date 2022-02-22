@@ -11,12 +11,13 @@ import GoogleSignIn
 
 @main
 struct HMAppApp: App {
-    
+    @StateObject var viewModel = ManageAccount()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
     

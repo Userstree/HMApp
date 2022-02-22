@@ -11,7 +11,6 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage("log_Status") var log_Status = false
-    @EnvironmentObject var createAccount: ManageAccount
     
     var body: some View {
         ZStack{
