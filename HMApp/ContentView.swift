@@ -15,15 +15,7 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             if log_Status {
-                NavigationView {
-                    VStack {
-                        Text("HERE")
-                        
-                        Button("Logout") {
-                            log_Status = false
-                        }
-                    }
-                }
+                HomeView()
             } else {
                 Welcome()
             }
@@ -37,7 +29,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-                .environmentObject(ManageAccount())
+                .environmentObject(UserDetailsViewModel())
         }
     }
 }

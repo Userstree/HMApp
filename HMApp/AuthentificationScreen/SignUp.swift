@@ -7,22 +7,26 @@
 
 import SwiftUI
 
-struct SignUp: View {
-    
+struct SignUp: View
+{
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var username: String = ""
     @Binding var index: Int
-    @EnvironmentObject var accountCreation: ManageAccount
+    @EnvironmentObject var viewModel: UserDetailsViewModel
     
-    var body: some View {
-        
-        ZStack(alignment: .bottom) {
-            VStack {
-                HStack {
+    var body: some View
+    {
+        ZStack(alignment: .bottom)
+        {
+            VStack
+            {
+                HStack
+                {
                     Spacer(minLength: 0)
             
-                    VStack(spacing: 10) {
+                    VStack(spacing: 10)
+                    {
                         Text("SignUp")
                             .foregroundColor(self.index == 1 ? Color.white : Color.gray)
                             .font(.title)
@@ -31,12 +35,12 @@ struct SignUp: View {
                         Capsule()
                             .fill(self.index == 1 ? Color.fieldsMainGreenColor : Color.clear)
                             .frame(width: 100, height: 5)
-                        
                     }
                 }
                 .padding(.top, 30)
                 
-                VStack {
+                VStack
+                {
                     HStack(spacing: 15) {
                         Image(systemName: "person.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
@@ -50,8 +54,10 @@ struct SignUp: View {
                 .padding(.horizontal)
                 .padding(.top, 40)
                 
-                VStack {
-                    HStack(spacing: 15) {
+                VStack
+                {
+                    HStack(spacing: 15)
+                    {
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
     
@@ -64,7 +70,8 @@ struct SignUp: View {
                 .padding(.horizontal)
                 .padding(.top, 40)
                 
-                VStack {
+                VStack
+                {
                     Field(text: $password)
                     Divider().background(Color.white.opacity(0.5))
                 }
@@ -85,11 +92,10 @@ struct SignUp: View {
             .padding(.horizontal, 20)
             
             Button(action: {
-                
-                accountCreation.registerUser(username: username, email: email, password: password)
-                
-            }) {
-                
+                viewModel.registerUser(username: username, email: email, password: password)
+                self.index = 0
+                }
+            ) {
                 Text("Register")
                     .foregroundColor(Color.black)
                     .fontWeight(.bold)
@@ -103,7 +109,6 @@ struct SignUp: View {
             .cornerRadius(30)
             .offset(y: 25)
             .opacity(self.index == 1 ? 1 : 0)
-            
         }
     }
 }

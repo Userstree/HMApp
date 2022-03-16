@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AAB97306826202A4D0D2DE37 /* Pods_HMApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298C84C410D38364B96DC61D /* Pods_HMApp.framework */; };
+		C211ED9527CBC1DE0057CD49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211ED9427CBC1DE0057CD49 /* User.swift */; };
+		C211ED9727CE2C0D0057CD49 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C211ED9627CE2C0D0057CD49 /* UserRepository.swift */; };
 		C272AC432791F6F100C9041F /* HMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC422791F6F100C9041F /* HMAppApp.swift */; };
 		C272AC452791F6F100C9041F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC442791F6F100C9041F /* ContentView.swift */; };
 		C272AC472791F6F300C9041F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272AC462791F6F300C9041F /* Assets.xcassets */; };
@@ -15,20 +17,26 @@
 		C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC502791F9D500C9041F /* Color+Ext.swift */; };
 		C282BD17279F127500482118 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282BD16279F127400482118 /* WelcomeView.swift */; };
 		C282BD1A279F1B5D00482118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C282BD19279F1B5D00482118 /* GoogleService-Info.plist */; };
-		C29342B627B2996600B11800 /* CredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29342B527B2996600B11800 /* CredentialsModel.swift */; };
-		C2BFA488279F39B50039A610 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C2BFA487279F39B50039A610 /* GoogleSignIn */; };
 		C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48B27A0443E0039A610 /* CustomShapes.swift */; };
 		C2BFA48E27A0448E0039A610 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48D27A0448E0039A610 /* Login.swift */; };
 		C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48F27A044DA0039A610 /* SignUp.swift */; };
 		C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */; };
 		C2BFA49427A321C80039A610 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49327A321C80039A610 /* HomeView.swift */; };
-		C2BFA49627A3274A0039A610 /* ManageAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49527A3274A0039A610 /* ManageAccount.swift */; };
-		C2BFA49827A6840F0039A610 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49727A6840F0039A610 /* LoadingScreen.swift */; };
+		C2BFA49627A3274A0039A610 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49527A3274A0039A610 /* UserDetailsViewModel.swift */; };
+		C2D413D327DB161C00F67353 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413D227DB161C00F67353 /* Card.swift */; };
+		C2D413D527DB16E600F67353 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413D427DB16E600F67353 /* CardRepository.swift */; };
+		C2D413DC27DE458100F67353 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413DB27DE458100F67353 /* CardItem.swift */; };
+		C2D413DE27DE499800F67353 /* UserInfoTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413DD27DE499800F67353 /* UserInfoTop.swift */; };
+		C2D413E027DE4C3600F67353 /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413DF27DE4C3600F67353 /* CardContent.swift */; };
+		C2E416FD27E05BEC00281BC1 /* CustomCardsScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E416FC27E05BEC00281BC1 /* CustomCardsScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B60E7FDBAD53DFF35A91B36 /* Pods-HMApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMApp.debug.xcconfig"; path = "Target Support Files/Pods-HMApp/Pods-HMApp.debug.xcconfig"; sourceTree = "<group>"; };
 		298C84C410D38364B96DC61D /* Pods_HMApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HMApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C211ED9427CBC1DE0057CD49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C211ED9627CE2C0D0057CD49 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		C22F564327E22CA80010D906 /* HMAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMAppRelease.entitlements; sourceTree = "<group>"; };
 		C272AC3F2791F6F100C9041F /* HMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C272AC422791F6F100C9041F /* HMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAppApp.swift; sourceTree = "<group>"; };
 		C272AC442791F6F100C9041F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,15 +45,19 @@
 		C272AC502791F9D500C9041F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		C282BD16279F127400482118 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C282BD19279F1B5D00482118 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C29342B527B2996600B11800 /* CredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModel.swift; sourceTree = "<group>"; };
 		C2BFA489279F3B6D0039A610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "HMApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		C2BFA48B27A0443E0039A610 /* CustomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapes.swift; sourceTree = "<group>"; };
 		C2BFA48D27A0448E0039A610 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		C2BFA48F27A044DA0039A610 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRepresentable+Ext.swift"; sourceTree = "<group>"; };
 		C2BFA49327A321C80039A610 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		C2BFA49527A3274A0039A610 /* ManageAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccount.swift; sourceTree = "<group>"; };
-		C2BFA49727A6840F0039A610 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		C2BFA49527A3274A0039A610 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		C2D413D227DB161C00F67353 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C2D413D427DB16E600F67353 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		C2D413DB27DE458100F67353 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		C2D413DD27DE499800F67353 /* UserInfoTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTop.swift; sourceTree = "<group>"; };
+		C2D413DF27DE4C3600F67353 /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
+		C2E416FC27E05BEC00281BC1 /* CustomCardsScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardsScroll.swift; sourceTree = "<group>"; };
 		E939D5103670EAFC1A77877C /* Pods-HMApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMApp.release.xcconfig"; path = "Target Support Files/Pods-HMApp/Pods-HMApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB97306826202A4D0D2DE37 /* Pods_HMApp.framework in Frameworks */,
-				C2BFA488279F39B50039A610 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +90,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C211ED9027CBBFFF0057CD49 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C211ED9627CE2C0D0057CD49 /* UserRepository.swift */,
+				C2D413D427DB16E600F67353 /* CardRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C211ED9327CBC0420057CD49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C211ED9427CBC1DE0057CD49 /* User.swift */,
+				C2D413D227DB161C00F67353 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C211ED9827CE2EDA0057CD49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C2BFA49527A3274A0039A610 /* UserDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C272AC362791F6F100C9041F = {
 			isa = PBXGroup;
 			children = (
@@ -100,15 +137,17 @@
 		C272AC412791F6F100C9041F /* HMApp */ = {
 			isa = PBXGroup;
 			children = (
-				C29342B427B2992C00B11800 /* Authentication */,
-				C282BD18279F133800482118 /* Color+Ext */,
-				C282BD15279EDE4800482118 /* HomeScreen */,
+				C22F564327E22CA80010D906 /* HMAppRelease.entitlements */,
+				C2D413D827DE455900F67353 /* Views */,
+				C2D413D627DB511700F67353 /* Extensions */,
+				C211ED9827CE2EDA0057CD49 /* ViewModels */,
+				C211ED9327CBC0420057CD49 /* Models */,
+				C211ED9027CBBFFF0057CD49 /* Repository */,
 				C282BD14279EDE3000482118 /* AuthentificationScreen */,
 				C272AC422791F6F100C9041F /* HMAppApp.swift */,
 				C272AC442791F6F100C9041F /* ContentView.swift */,
 				C2BFA48A27A000460039A610 /* Supporting Files */,
 				C272AC482791F6F300C9041F /* Preview Content */,
-				C2BFA49727A6840F0039A610 /* LoadingScreen.swift */,
 			);
 			path = HMApp;
 			sourceTree = "<group>";
@@ -136,8 +175,11 @@
 		C282BD15279EDE4800482118 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C2D413DB27DE458100F67353 /* CardItem.swift */,
 				C2BFA49327A321C80039A610 /* HomeView.swift */,
-				C2BFA49527A3274A0039A610 /* ManageAccount.swift */,
+				C2D413DD27DE499800F67353 /* UserInfoTop.swift */,
+				C2D413DF27DE4C3600F67353 /* CardContent.swift */,
+				C2E416FC27E05BEC00281BC1 /* CustomCardsScroll.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -150,14 +192,6 @@
 			path = "Color+Ext";
 			sourceTree = "<group>";
 		};
-		C29342B427B2992C00B11800 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				C29342B527B2996600B11800 /* CredentialsModel.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		C2BFA48A27A000460039A610 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +200,22 @@
 				C272AC462791F6F300C9041F /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2D413D627DB511700F67353 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C282BD18279F133800482118 /* Color+Ext */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2D413D827DE455900F67353 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C282BD15279EDE4800482118 /* HomeScreen */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +237,6 @@
 			);
 			name = HMApp;
 			packageProductDependencies = (
-				C2BFA487279F39B50039A610 /* GoogleSignIn */,
 			);
 			productName = HMApp;
 			productReference = C272AC3F2791F6F100C9041F /* HMApp.app */;
@@ -289,17 +338,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C29342B627B2996600B11800 /* CredentialsModel.swift in Sources */,
+				C211ED9727CE2C0D0057CD49 /* UserRepository.swift in Sources */,
 				C2BFA49427A321C80039A610 /* HomeView.swift in Sources */,
-				C2BFA49827A6840F0039A610 /* LoadingScreen.swift in Sources */,
+				C2D413DC27DE458100F67353 /* CardItem.swift in Sources */,
 				C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */,
 				C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */,
 				C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */,
+				C211ED9527CBC1DE0057CD49 /* User.swift in Sources */,
 				C272AC452791F6F100C9041F /* ContentView.swift in Sources */,
+				C2D413D527DB16E600F67353 /* CardRepository.swift in Sources */,
 				C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */,
+				C2D413DE27DE499800F67353 /* UserInfoTop.swift in Sources */,
+				C2E416FD27E05BEC00281BC1 /* CustomCardsScroll.swift in Sources */,
+				C2D413D327DB161C00F67353 /* Card.swift in Sources */,
 				C2BFA48E27A0448E0039A610 /* Login.swift in Sources */,
 				C272AC432791F6F100C9041F /* HMAppApp.swift in Sources */,
-				C2BFA49627A3274A0039A610 /* ManageAccount.swift in Sources */,
+				C2D413E027DE4C3600F67353 /* CardContent.swift in Sources */,
+				C2BFA49627A3274A0039A610 /* UserDetailsViewModel.swift in Sources */,
 				C282BD17279F127500482118 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HMApp/HMAppRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HMApp/Preview Content\"";
@@ -518,14 +574,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C2BFA487279F39B50039A610 /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C2BFA486279F39B40039A610 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C272AC372791F6F100C9041F /* Project object */;
 }

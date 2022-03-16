@@ -14,7 +14,7 @@ struct Login: View {
     @State private var password: String = ""
     @Binding var index: Int
     
-    @EnvironmentObject var homeViewModel: ManageAccount
+    @EnvironmentObject var homeViewModel: UserDetailsViewModel
     
     var body: some View {
         

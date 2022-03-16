@@ -21,3 +21,6 @@ extension Color{
     
 }
 
+extension UIColor {
+    static let mainDarkBlueBackgroundColor = UIColor(red: 1/255, green: 25/255, blue: 32/255, alpha: 1)
+}

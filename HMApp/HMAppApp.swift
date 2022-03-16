@@ -11,7 +11,7 @@ import GoogleSignIn
 
 @main
 struct HMAppApp: App {
-    @StateObject var viewModel = ManageAccount()
+    @StateObject var viewModel = UserDetailsViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
