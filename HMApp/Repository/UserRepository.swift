@@ -29,19 +29,23 @@ final class UserRepository: UserRepositoryProtocol {
                 print("Error fetching the document \(String(describing: error?.localizedDescription))")
                 return
             }
-            user.username = data["username"] as! String
-            let userImg = data["userImage"] as! String
-            DispatchQueue.main.async {
-                Storage.storage().reference(forURL: userImg).getData(maxSize: 1 * 1024 * 1024) { data, error in
-                    if error != nil {
-                        print("Error in storage download", error?.localizedDescription)
-                        return
+            guard let username = data["username"] as? String else {
+                return
+            }
+            user.username = username
+            if let userImg = data["userImage"] as? String {
+                DispatchQueue.main.async {
+                    Storage.storage().reference(forURL: userImg).getData(maxSize: 1 * 1024 * 1024) { data, error in
+                        if error != nil {
+                            print("Error in storage download", error?.localizedDescription)
+                            return
+                        }
+                        guard let data = data else {
+                            return
+                        }
+                        user.image = data
+                        completion(user)
                     }
-                    guard let data = data else {
-                        return
-                    }
-                    user.image = data
-                    completion(user)
                 }
             }
         }

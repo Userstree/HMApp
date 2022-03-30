@@ -12,10 +12,15 @@ import GoogleSignIn
 struct ContentView: View {
     @AppStorage("log_Status") var log_Status = false
     
-    var body: some View {
-        ZStack{
+    var body: some View
+    {
+        ZStack
+        {
             if log_Status {
-                HomeView()
+                NavigationView {
+                    HomeView()
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
             } else {
                 Welcome()
             }

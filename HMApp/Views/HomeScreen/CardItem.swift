@@ -6,18 +6,29 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct CardItem: View {
     var card: Card
-    
-    var body: some View {
-        
-        VStack(alignment: .center) {
-            AsyncImage(url: URL(string: card.image))
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 120)
-                .padding()
-                .cornerRadius(15)
+    var body: some View
+    {
+        VStack(alignment: .center)
+        {
+            CachedAsyncImage(
+                url: URL(string: card.image),
+                content: { image in
+                    image
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(15)
+                },
+                placeholder: {
+                    ProgressView("Loading...")
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.fieldsMainGreenColor))
+                }
+            )
+            .padding()
             
             Text(card.name)
                 .foregroundColor(.white)
@@ -27,8 +38,11 @@ struct CardItem: View {
     }
 }
 
-struct CardItem_Previews: PreviewProvider {
-    static var previews: some View {
-        CardItem(card: Card.init(image: "data:image/png;base64,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", name: "Card"))
+struct CardItem_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
+        CardItem(card: Card.init(image: "https://www.bhaktiphotos.com/wp-content/uploads/2018/04/Mahadev-Bhagwan-Photo-for-Devotee.jpg", name: "Card"))
+            .preferredColorScheme(.dark)
     }
 }

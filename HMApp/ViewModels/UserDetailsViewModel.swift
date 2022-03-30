@@ -12,9 +12,14 @@ import FirebaseFirestoreSwift
 
 class UserDetailsViewModel: ObservableObject
 {
+    let auth = Auth.auth()
     @Published var userInfo: User?
     @Published var cardsInfo: [Card]?
-    @Published var errorMsg = ""
+    @Published var signedIn = false
+    
+    var isSignedIn: Bool {
+        return auth.currentUser != nil
+    }
     
     private let userRepository: UserRepositoryProtocol
     private let cardRepository: CardRepositoryProtocol
@@ -40,10 +45,14 @@ extension UserDetailsViewModel
     
     func login(email: String, password: String)
     {
-        Auth.auth().signIn(withEmail: email, password: password) { res, error in
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] res, error in
             if let error = error
             {
                 print("Failed to sign in due to ", error.localizedDescription)
+            }
+            
+            DispatchQueue.main.async {
+                self?.signedIn = true
             }
         }
     }
@@ -51,27 +60,27 @@ extension UserDetailsViewModel
     func registerUser(username: String, email: String, password: String)
     {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            
-            if let error = error
+            if error != nil
             {
-                print("Failed to register user due to ", error.localizedDescription)
+                print("Failed to register user due to ", error?.localizedDescription)
             }
-            
             guard let uid = result?.user.uid else
             {
                 return
             }
-            
+            print("Adding to collection")
             let db = Firestore.firestore()
             db.collection("Users").document(uid).setData([ "Username" : username,
                                                            "Email" : email
                                                          ]
             ) { error in
                 if error != nil {
-                    self.errorMsg = error!.localizedDescription
                     return
                 }
             }
+//            DispatchQueue.main.async {
+//                self?.signedIn = true
+//            }
         }
     }
 }

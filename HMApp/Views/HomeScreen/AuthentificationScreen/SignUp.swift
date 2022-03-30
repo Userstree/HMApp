@@ -12,6 +12,7 @@ struct SignUp: View
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var username: String = ""
+    @State private var isSecure: Bool = true
     @Binding var index: Int
     @EnvironmentObject var viewModel: UserDetailsViewModel
     
@@ -45,7 +46,7 @@ struct SignUp: View
                         Image(systemName: "person.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
                         
-                        TextArea(placeholder: "Username", text: $username, isSecureEntry: false)
+                        TextArea(placeholder: "Username", text: $username, isSecureEntry: .constant(false))
                             .frame(height: 20)
                         
                     }
@@ -61,7 +62,7 @@ struct SignUp: View
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
     
-                        TextArea(placeholder: "Email", text: $email, isSecureEntry: false)
+                        TextArea(placeholder: "Email", text: $email, isSecureEntry: .constant(false))
                             .frame(height: 20)
                         
                     }
@@ -72,7 +73,7 @@ struct SignUp: View
                 
                 VStack
                 {
-                    Field(text: $password)
+                    Field(isSecured: $isSecure, text: $password)
                     Divider().background(Color.white.opacity(0.5))
                 }
                 .padding(.horizontal)

@@ -7,9 +7,15 @@
 
 import UIKit
 
-class Card: Codable, Identifiable {
+class Card: Codable, Hashable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.name == rhs.name && lhs.image == rhs.image
+    }
     
-    var id = UUID().uuidString
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+
     var image: String
     var name: String
     

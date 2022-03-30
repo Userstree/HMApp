@@ -9,68 +9,60 @@ import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
 
-let colorNavAppearance = UINavigationBarAppearance()
-
 struct HomeView: View {
     @EnvironmentObject var accountData: UserDetailsViewModel
-//    @ObservedObject var cardsModel: CardViewModel
     
-    init() {
-//        self.cardsModel = cardsModel
-        
-        colorNavAppearance.configureWithOpaqueBackground()
-        colorNavAppearance.backgroundColor = UIColor.mainDarkBlueBackgroundColor
-        colorNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        colorNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-               
-        UINavigationBar.appearance().standardAppearance = colorNavAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = colorNavAppearance
-    }
-    
-    var body: some View {
-        NavigationView {
-            VStack {
-                UserInfoTop(
-                    color: Color.white ,
-                    data: accountData.userInfo ?? User(username: "Loading", image: UIImage(systemName: "photo.circle")!)
-                )
-                    .padding()
-                
+    var body: some View
+    {
+        VStack
+        {
+            UserInfoTop(
+                color: Color.white ,
+                data: accountData.userInfo ?? User(username: "Loading", image: UIImage(systemName: "photo.circle")!)
+            )
+            .padding()
+            
+            Section(header:
+                        Text("Readings")
+                            .padding(.leading, -180)
+                            .foregroundColor(Color.white)
+            ){
                 CustomCardsScroll(images: accountData.cardsInfo
                                   ??
                                   [Card(image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", name: "two")]
                 )
-                    
             }
-                .onAppear {
-                    accountData.onAppear()
-                }
-            .navigationBarTitle("Main", displayMode: .inline)
-            .navigationBarItems(
-                trailing:
-                    Button(
-                        action: {
-                            withAnimation(.easeOut(duration: 0.3)) {
-                                ContentView().log_Status = false
-                                do
-                                {
-                                    try Auth.auth().signOut()
-                                }
-                                catch let signOutError as NSError
-                                {
-                                    print("Error signing out ", signOutError)
-                                }
+            Spacer()
+        }
+        .onAppear {
+            accountData.onAppear()
+        }
+        .background(Color.mainDarkBlueBackgroundColor.ignoresSafeArea())
+        .navigationBarTitle(Text("Home Page"))//, displayMode: .inline)
+        .toolbar {
+            ToolbarItem {
+                Button(
+                    action: {
+                        withAnimation(.easeOut(duration: 0.43))
+                        {
+                            ContentView().log_Status = false
+                            do {
+                                try Auth.auth().signOut()
+                            }
+                            catch let signOutError as NSError {
+                                print("Error signing out ", signOutError)
                             }
                         }
-                    ) {
-                        Text("Log out")
-                        .foregroundColor(Color.white)
                     }
-            )
-            .background(Color.mainDarkBlueBackgroundColor.ignoresSafeArea())
+                ) {
+                    Text("Log out")
+                        .foregroundColor(Color.white)
+                }
+            }
         }
     }
 }
+
 
 #if DEBUG
 struct HomeView_Previews: PreviewProvider {

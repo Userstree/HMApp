@@ -15,19 +15,24 @@ struct CustomCardsScroll: View {
         GridItem(.flexible())
     ]
     
-    var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(images) { item in
-                    VStack(alignment: .center) {
-                        NavigationLink(destination: CardContent(data: item)) {
-                            CardItem(card: item)
-                        }.padding(10)
+    var body: some View
+    {
+        ScrollView
+        {
+            LazyVGrid(columns: columns, spacing: 10)
+            {
+                ForEach(images, id: \.name) { image in
+                    NavigationLink(destination: CardContent(data: image, downloads: downloads)) {
+                        CardItem(card: image)
                     }
+                    .isDetailLink(false)
+                    .padding(10)
                 }
             }
         }
         .frame(maxHeight: 500)
+        .background(Color.cardBackgroundColor)
+        .cornerRadius(25)
     }
 }
 

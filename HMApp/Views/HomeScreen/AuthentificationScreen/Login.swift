@@ -12,6 +12,7 @@ import GoogleSignIn
 struct Login: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var isSecure: Bool = true
     @Binding var index: Int
     
     @EnvironmentObject var homeViewModel: UserDetailsViewModel
@@ -19,9 +20,12 @@ struct Login: View {
     var body: some View {
         
         ZStack(alignment: .bottom) {
-            VStack {
-                HStack {
-                    VStack(spacing: 10) {
+            VStack
+            {
+                HStack
+                {
+                    VStack(spacing: 10)
+                    {
                         Text("Login")
                             .foregroundColor(self.index == 0 ? Color.white : Color.gray)
                             .font(.title)
@@ -40,9 +44,10 @@ struct Login: View {
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color.fieldsMainGreenColor)
                         
-                        TextArea(placeholder: "Email", text: $email, isSecureEntry: false)
+                        TextArea(placeholder: "Email", text: $email, isSecureEntry: .constant(false))
                             .frame(height: 20)
                             .foregroundColor(Color.white)
+                        
                     }
                     Divider().background(Color.white.opacity(0.5))
                     
@@ -51,7 +56,7 @@ struct Login: View {
                 .padding(.top, 40)
                 
                 VStack {
-                    Field(text: $password )
+                    Field(isSecured: $isSecure, text: $password )
                     Divider().background(Color.white.opacity(0.5))
                 }
                 .padding(.horizontal)
@@ -67,7 +72,6 @@ struct Login: View {
                 }
                 .padding(.horizontal)
                 .padding(.top, 40)
-                
             }
             .padding()
             .padding(.bottom, 50)
@@ -83,8 +87,9 @@ struct Login: View {
             
             Button(action: {
                 homeViewModel.login(email: email, password: password)
-                
-                ContentView().log_Status = true
+                withAnimation(.easeIn(duration: 0.43)) {
+                    ContentView().log_Status = true
+                }
             }) {
                 Text("Login")
                     .foregroundColor(Color.black)

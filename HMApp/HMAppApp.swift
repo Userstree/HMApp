@@ -9,10 +9,23 @@ import SwiftUI
 import Firebase
 import GoogleSignIn
 
+let colorNavAppearance = UINavigationBarAppearance()
+
 @main
 struct HMAppApp: App {
     @StateObject var viewModel = UserDetailsViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    init()
+    {
+        colorNavAppearance.configureWithOpaqueBackground()
+        colorNavAppearance.backgroundColor = UIColor.mainDarkBlueBackgroundColor
+        colorNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        colorNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        UINavigationBar.appearance().standardAppearance = colorNavAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = colorNavAppearance
+    }
     
     var body: some Scene {
         WindowGroup {

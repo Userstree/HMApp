@@ -11,19 +11,21 @@ struct UserInfoTop: View {
     var color: Color
     var data: User
     
-    var body: some View {
-        HStack {
-                Image(uiImage: UIImage(data: data.image)!)
-                    .resizable()
-                    .foregroundColor(color)
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(40)
+    var body: some View
+    {
+        HStack
+        {
+            Image(uiImage: UIImage(data: data.image)!)
+                .resizable()
+                .background()
+                .frame(width: 80, height: 80)
+                .cornerRadius(40)
             
-                VStack {
-                    Text("Good morning")
-                    Text(data.username)
-                }
-                .foregroundColor(color)
+            VStack {
+                Text(getGreeting())
+                Text(data.username)
+            }
+            .foregroundColor(color)
             Spacer()
             Button(action: {}) {
                 Image(systemName: "square.and.pencil")
@@ -33,6 +35,26 @@ struct UserInfoTop: View {
             }
         }
         .background(Color.mainDarkBlueBackgroundColor)
+    }
+}
+
+extension UserInfoTop {
+    private func getGreeting() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+        case 0..<4:
+            return "Hello"
+        case 4..<12:
+            return "Good morning"
+        case 12..<18:
+            return "Good afternoon"
+        case 18..<24:
+            return "Good evening"
+        default:
+            break
+        }
+        return "Hello"
     }
 }
 
