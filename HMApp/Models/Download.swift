@@ -14,11 +14,11 @@ struct Download: Identifiable {
 }
 
 var downloads: [Download] = [
-    Download(downloads: 124, weekday: "Mon"),
+    Download(downloads: 224, weekday: "Mon"),
     Download(downloads: 142, weekday: "Tue"),
     Download(downloads: 222, weekday: "Wed"),
-    Download(downloads: 194, weekday: "Thu"),
-    Download(downloads: 213, weekday: "Fri"),
+    Download(downloads: 94, weekday: "Thu"),
+    Download(downloads: 113, weekday: "Fri"),
     Download(downloads: 104, weekday: "Sat"),
     Download(downloads: 120, weekday: "Sun")
 ]

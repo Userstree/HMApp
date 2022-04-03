@@ -13,28 +13,32 @@ struct UserInfoTop: View {
     
     var body: some View
     {
-        HStack
-        {
-            Image(uiImage: UIImage(data: data.image)!)
-                .resizable()
-                .background()
-                .frame(width: 80, height: 80)
-                .cornerRadius(40)
-            
-            VStack {
-                Text(getGreeting())
-                Text(data.username)
-            }
-            .foregroundColor(color)
-            Spacer()
-            Button(action: {}) {
-                Image(systemName: "square.and.pencil")
+//        NavigationView{
+            HStack
+            {
+                Image(uiImage: UIImage(data: data.image)!)
                     .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(color)
+                    .background()
+                    .frame(width: 80, height: 80)
+                    .cornerRadius(40)
+                
+                VStack {
+                    Text(getGreeting())
+                    Text(data.username)
+                }
+                .foregroundColor(color)
+                Spacer()
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "square.and.pencil")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(color)
+                }
             }
-        }
-        .background(Color.mainDarkBlueBackgroundColor)
+            .background(Color.mainDarkBlueBackgroundColor)
+//        }
     }
 }
 

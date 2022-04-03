@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditProfileView: View {
     var data: User
-//    @State var age: Int
+    @State var birthDate: Date
     @State var username: String = ""
     var ageRange: [ClosedRange<Int>] = [1...100]
     var body: some View {
@@ -20,14 +20,22 @@ struct EditProfileView: View {
                 Image(uiImage: UIImage(data: data.image)!)
                     .resizable()
                     .scaledToFit()
-                    .cornerRadius(75)
                     .overlay(
                         Image(systemName: "pencil")
                             .resizable()
-                            .frame(width: 40, height: 40, alignment: .bottomLeading)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.white)
+                            .offset(x: -30, y: -20),
+                        alignment: .bottomTrailing
                     )
                     .frame(width: 180, height: 180)
+                    .cornerRadius(90)
+                    .onTapGesture {
+                        
+                    }
+                Text(data.username)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 20)
             }
             
             VStack {
@@ -45,25 +53,17 @@ struct EditProfileView: View {
             .padding(.horizontal)
             .padding(.top, 40)
             
-//            VStack
-//            {
-//                HStack
-//                {
-//                    Text("Age:")
-//                        .foregroundColor(.white)
-//                        .font(.custom("Times New Roman", size: 20))
-//                        .fontWeight(.semibold)
-//
-//                    Picker(selection: $age) {
-//                        ForEach(ageRange, id: \.self) { age in
-//                            Text(ageRange[)
-//                        }
-//                    } label: {
-//                        Text("Select")
-//                    }
-//
-//                }
-//            }
+            VStack
+            {
+                DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date)
+                {
+                    Text("Select a birthdate")
+                }
+                .accentColor(Color.fieldsMainGreenColor)
+                .colorInvert()
+                .padding(.horizontal, 20)
+            }
+            .padding(.top, 30)
             
             VStack
             {
@@ -130,6 +130,6 @@ struct EditProfileView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView(data: User(username: "ARS", image: UIImage(systemName: "bell")!))
+        EditProfileView(data: User(username: "ARS", image: UIImage(systemName: "bell")!), birthDate: Date.now)
     }
 }

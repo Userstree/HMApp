@@ -33,6 +33,7 @@ struct HomeView: View {
                 )
             }
             Spacer()
+            
         }
         .onAppear {
             accountData.onAppear()
