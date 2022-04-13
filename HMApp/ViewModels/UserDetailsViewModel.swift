@@ -78,9 +78,6 @@ extension UserDetailsViewModel
                     return
                 }
             }
-//            DispatchQueue.main.async {
-//                self?.signedIn = true
-//            }
         }
     }
 }

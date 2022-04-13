@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EditProfileView: View {
     var data: User
-    @State var birthDate: Date
+//    @State var birthDate: Date
     @State var username: String = ""
-    var ageRange: [ClosedRange<Int>] = [1...100]
+//    var ageRange: [ClosedRange<Int>] = [1...100]
     var body: some View {
         ScrollView
         {
@@ -53,17 +53,17 @@ struct EditProfileView: View {
             .padding(.horizontal)
             .padding(.top, 40)
             
-            VStack
-            {
-                DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date)
-                {
-                    Text("Select a birthdate")
-                }
-                .accentColor(Color.fieldsMainGreenColor)
-                .colorInvert()
-                .padding(.horizontal, 20)
-            }
-            .padding(.top, 30)
+//            VStack
+//            {
+//                DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date)
+//                {
+//                    Text("Select a birthdate")
+//                }
+//                .accentColor(Color.fieldsMainGreenColor)
+//                .colorInvert()
+//                .padding(.horizontal, 20)
+//            }
+//            .padding(.top, 30)
             
             VStack
             {
@@ -130,6 +130,6 @@ struct EditProfileView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView(data: User(username: "ARS", image: UIImage(systemName: "bell")!), birthDate: Date.now)
+        EditProfileView(data: User(username: "ARS", image: UIImage(systemName: "bell")!))
     }
 }

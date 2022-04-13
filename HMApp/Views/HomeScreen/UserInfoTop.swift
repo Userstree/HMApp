@@ -13,30 +13,38 @@ struct UserInfoTop: View {
     
     var body: some View
     {
-//        NavigationView{
+//        NavigationView {
             HStack
-            {
-                Image(uiImage: UIImage(data: data.image)!)
-                    .resizable()
-                    .background()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(40)
-                
-                VStack {
-                    Text(getGreeting())
-                    Text(data.username)
-                }
-                .foregroundColor(color)
-                Spacer()
-                Button(action: {
-                    
-                }) {
-                    Image(systemName: "square.and.pencil")
+                {
+                    Image(uiImage: UIImage(data: data.image)!)
                         .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(color)
+                        .background()
+                        .frame(width: 80, height: 80)
+                        .cornerRadius(40)
+                    
+                    VStack {
+                        Text(getGreeting())
+                        Text(data.username)
+                    }
+                    .foregroundColor(color)
+                    Spacer()
+//                    Button(action: {
+                    NavigationLink {
+                        EditProfileView(data: data)
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(color)
+                    }
+
+//                    }) {
+//                        Image(systemName: "square.and.pencil")
+//                            .resizable()
+//                            .frame(width: 30, height: 30)
+//                            .foregroundColor(color)
+//                    }
                 }
-            }
             .background(Color.mainDarkBlueBackgroundColor)
 //        }
     }
