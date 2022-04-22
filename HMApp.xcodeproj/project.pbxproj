@@ -19,12 +19,25 @@
 		C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272AC502791F9D500C9041F /* Color+Ext.swift */; };
 		C282BD17279F127500482118 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282BD16279F127400482118 /* WelcomeView.swift */; };
 		C282BD1A279F1B5D00482118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C282BD19279F1B5D00482118 /* GoogleService-Info.plist */; };
+		C28C6E6028106E2E00B366AE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C6E5F28106E2E00B366AE /* Network.swift */; };
+		C28C6E64281077B900B366AE /* JSONfile.json in Resources */ = {isa = PBXBuildFile; fileRef = C28C6E63281077B900B366AE /* JSONfile.json */; };
+		C28C6E67281078AD00B366AE /* Sensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C6E66281078AD00B366AE /* Sensors.swift */; };
 		C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48B27A0443E0039A610 /* CustomShapes.swift */; };
 		C2BFA48E27A0448E0039A610 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48D27A0448E0039A610 /* Login.swift */; };
 		C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA48F27A044DA0039A610 /* SignUp.swift */; };
 		C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */; };
 		C2BFA49427A321C80039A610 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49327A321C80039A610 /* HomeView.swift */; };
 		C2BFA49627A3274A0039A610 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BFA49527A3274A0039A610 /* UserDetailsViewModel.swift */; };
+		C2CB788F280C97330076B186 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB787B280C97330076B186 /* BluetoothManager.swift */; };
+		C2CB7890280C97330076B186 /* StripeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB787C280C97330076B186 /* StripeState.swift */; };
+		C2CB7891280C97330076B186 /* StripeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB787D280C97330076B186 /* StripeData.swift */; };
+		C2CB7893280C97330076B186 /* Set+Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB7881280C97330076B186 /* Set+Cancellable.swift */; };
+		C2CB7894280C97330076B186 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB7884280C97330076B186 /* DeviceView.swift */; };
+		C2CB7895280C97330076B186 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB7885280C97330076B186 /* DeviceViewModel.swift */; };
+		C2CB7896280C97330076B186 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB7887280C97330076B186 /* MainViewModel.swift */; };
+		C2CB7897280C97330076B186 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB7888280C97330076B186 /* MainView.swift */; };
+		C2CB7898280C97330076B186 /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB788A280C97330076B186 /* DevicesViewModel.swift */; };
+		C2CB7899280C97330076B186 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB788B280C97330076B186 /* DevicesView.swift */; };
 		C2D413D327DB161C00F67353 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413D227DB161C00F67353 /* Card.swift */; };
 		C2D413D527DB16E600F67353 /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413D427DB16E600F67353 /* CardRepository.swift */; };
 		C2D413DC27DE458100F67353 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D413DB27DE458100F67353 /* CardItem.swift */; };
@@ -52,6 +65,9 @@
 		C272AC502791F9D500C9041F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		C282BD16279F127400482118 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C282BD19279F1B5D00482118 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C28C6E5F28106E2E00B366AE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C28C6E63281077B900B366AE /* JSONfile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONfile.json; sourceTree = "<group>"; };
+		C28C6E66281078AD00B366AE /* Sensors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensors.swift; sourceTree = "<group>"; };
 		C2BFA489279F3B6D0039A610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "HMApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		C2BFA48B27A0443E0039A610 /* CustomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapes.swift; sourceTree = "<group>"; };
 		C2BFA48D27A0448E0039A610 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -59,6 +75,16 @@
 		C2BFA49127A18E630039A610 /* ViewRepresentable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRepresentable+Ext.swift"; sourceTree = "<group>"; };
 		C2BFA49327A321C80039A610 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C2BFA49527A3274A0039A610 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		C2CB787B280C97330076B186 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		C2CB787C280C97330076B186 /* StripeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeState.swift; sourceTree = "<group>"; };
+		C2CB787D280C97330076B186 /* StripeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeData.swift; sourceTree = "<group>"; };
+		C2CB7881280C97330076B186 /* Set+Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+Cancellable.swift"; sourceTree = "<group>"; };
+		C2CB7884280C97330076B186 /* DeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		C2CB7885280C97330076B186 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
+		C2CB7887280C97330076B186 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C2CB7888280C97330076B186 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C2CB788A280C97330076B186 /* DevicesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
+		C2CB788B280C97330076B186 /* DevicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		C2D413D227DB161C00F67353 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C2D413D427DB16E600F67353 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		C2D413DB27DE458100F67353 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
@@ -107,6 +133,7 @@
 			children = (
 				C211ED9627CE2C0D0057CD49 /* UserRepository.swift */,
 				C2D413D427DB16E600F67353 /* CardRepository.swift */,
+				C28C6E5F28106E2E00B366AE /* Network.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -117,6 +144,7 @@
 				C211ED9427CBC1DE0057CD49 /* User.swift */,
 				C2D413D227DB161C00F67353 /* Card.swift */,
 				C2E6B86027F1B46A007B65CE /* Download.swift */,
+				C28C6E66281078AD00B366AE /* Sensors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +187,8 @@
 		C272AC412791F6F100C9041F /* HMApp */ = {
 			isa = PBXGroup;
 			children = (
+				C28C6E63281077B900B366AE /* JSONfile.json */,
+				C2CB7877280C97330076B186 /* ColorStripeBluetooth */,
 				C2282BDA27FC2A28007A4548 /* Helpers */,
 				C2E6B85C27EEEC59007B65CE /* ViewModifiers */,
 				C2D413D827DE455900F67353 /* Views */,
@@ -222,6 +252,71 @@
 				C272AC462791F6F300C9041F /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2CB7877280C97330076B186 /* ColorStripeBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB787A280C97330076B186 /* Models */,
+				C2CB7880280C97330076B186 /* Extensions */,
+				C2CB7882280C97330076B186 /* Views */,
+			);
+			path = ColorStripeBluetooth;
+			sourceTree = "<group>";
+		};
+		C2CB787A280C97330076B186 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB787B280C97330076B186 /* BluetoothManager.swift */,
+				C2CB787C280C97330076B186 /* StripeState.swift */,
+				C2CB787D280C97330076B186 /* StripeData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C2CB7880280C97330076B186 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB7881280C97330076B186 /* Set+Cancellable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2CB7882280C97330076B186 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB7883280C97330076B186 /* Device */,
+				C2CB7886280C97330076B186 /* Main */,
+				C2CB7889280C97330076B186 /* Devices */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C2CB7883280C97330076B186 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB7884280C97330076B186 /* DeviceView.swift */,
+				C2CB7885280C97330076B186 /* DeviceViewModel.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		C2CB7886280C97330076B186 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB7887280C97330076B186 /* MainViewModel.swift */,
+				C2CB7888280C97330076B186 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C2CB7889280C97330076B186 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB788A280C97330076B186 /* DevicesViewModel.swift */,
+				C2CB788B280C97330076B186 /* DevicesView.swift */,
+			);
+			path = Devices;
 			sourceTree = "<group>";
 		};
 		C2D413D627DB511700F67353 /* Extensions */ = {
@@ -329,6 +424,7 @@
 				C272AC4A2791F6F300C9041F /* Preview Assets.xcassets in Resources */,
 				C272AC472791F6F300C9041F /* Assets.xcassets in Resources */,
 				C282BD1A279F1B5D00482118 /* GoogleService-Info.plist in Resources */,
+				C28C6E64281077B900B366AE /* JSONfile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +478,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C211ED9727CE2C0D0057CD49 /* UserRepository.swift in Sources */,
+				C2CB7899280C97330076B186 /* DevicesView.swift in Sources */,
 				C2BFA49427A321C80039A610 /* HomeView.swift in Sources */,
+				C2CB788F280C97330076B186 /* BluetoothManager.swift in Sources */,
 				C2D413DC27DE458100F67353 /* CardItem.swift in Sources */,
 				C2BFA49027A044DA0039A610 /* SignUp.swift in Sources */,
 				C2BFA49227A18E630039A610 /* ViewRepresentable+Ext.swift in Sources */,
@@ -391,19 +489,29 @@
 				C2E6B86427F3373B007B65CE /* EditProfileView.swift in Sources */,
 				C272AC512791F9D500C9041F /* Color+Ext.swift in Sources */,
 				C211ED9527CBC1DE0057CD49 /* User.swift in Sources */,
+				C2CB7898280C97330076B186 /* DevicesViewModel.swift in Sources */,
 				C272AC452791F6F100C9041F /* ContentView.swift in Sources */,
+				C2CB7890280C97330076B186 /* StripeState.swift in Sources */,
+				C2CB7894280C97330076B186 /* DeviceView.swift in Sources */,
 				C2E6B86627F43D4B007B65CE /* FormView.swift in Sources */,
 				C2D413D527DB16E600F67353 /* CardRepository.swift in Sources */,
 				C2BFA48C27A0443E0039A610 /* CustomShapes.swift in Sources */,
 				C2D413DE27DE499800F67353 /* UserInfoTop.swift in Sources */,
+				C2CB7897280C97330076B186 /* MainView.swift in Sources */,
 				C2E416FD27E05BEC00281BC1 /* CustomCardsScroll.swift in Sources */,
 				C2E6B86127F1B46A007B65CE /* Download.swift in Sources */,
 				C2D413D327DB161C00F67353 /* Card.swift in Sources */,
 				C2BFA48E27A0448E0039A610 /* Login.swift in Sources */,
 				C272AC432791F6F100C9041F /* HMAppApp.swift in Sources */,
+				C2CB7893280C97330076B186 /* Set+Cancellable.swift in Sources */,
+				C2CB7891280C97330076B186 /* StripeData.swift in Sources */,
 				C2D413E027DE4C3600F67353 /* CardContent.swift in Sources */,
 				C2BFA49627A3274A0039A610 /* UserDetailsViewModel.swift in Sources */,
+				C2CB7895280C97330076B186 /* DeviceViewModel.swift in Sources */,
 				C282BD17279F127500482118 /* WelcomeView.swift in Sources */,
+				C2CB7896280C97330076B186 /* MainViewModel.swift in Sources */,
+				C28C6E6028106E2E00B366AE /* Network.swift in Sources */,
+				C28C6E67281078AD00B366AE /* Sensors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +649,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HMApp/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Control;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,6 +682,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HMApp/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Control;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

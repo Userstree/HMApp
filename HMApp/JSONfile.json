@@ -1,0 +1,43 @@
+//
+//  JSONfile.swift
+//  HMApp
+//
+//  Created by Dossymkhan Zhulamanov on 20.04.2022.
+//
+
+
+[
+    {
+        "channel":
+        {
+            "id" : 1701186,
+            "name" : "Patient Monitoring System",
+            "description" : "A real-time patient monitoring system using the Internet of Things",
+            "latitude" : "0.0",
+            "longitude" : "0.0",
+            "field1" : "Body Temperature",
+            "field2" : "Humidity",
+            "field3" : "Room Temperature",
+            "created_at" : "2022-04-11T10:47:57Z",
+            "updated_at" : "2022-04-11T10:47:57Z",
+            "last_entry_id" : 133
+        },
+        "feeds":
+        [
+            {
+                "created_at" : "2022-04-19T16:41:00Z",
+                "entry_id" : 132,
+                "field1" : "32.50", // body temperature
+                "field2" : "27",
+                "field3" : "39"
+            },
+            {
+                "created_at" : "2022-04-19T16:41:35Z",
+                "entry_id" : 133,
+                "field1" : "32.44",
+                "field2" : "28",
+                "field3" : "40"
+            }
+        ]
+    }
+]
